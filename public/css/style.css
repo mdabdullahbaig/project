@@ -48,7 +48,7 @@
 #sidebar .toggle-btn {
     position: absolute;
     left: 245px;
-    top: 20px
+    bottom: 20px
 }
 #sidebar .toggle-btn span {
     display:block;
