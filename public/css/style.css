@@ -4,7 +4,7 @@
 }
 
 body {
-	text-align: center;
+	
 }
 
 #google {
@@ -22,10 +22,10 @@ body {
 
 #sidebar {
 	position: fixed;
-	width: 200px;
+	width: 230px;
 	height: 650px;
 	background-color: #049BCB;
-	left: -200px;
+	left: -230px;
 	transition: all 200ms linear;
 	text-align: left
 }
@@ -52,7 +52,7 @@ body {
 
 #sidebar .toggle-btn {
 	position: absolute;
-	left: 215px;
+	left: 245px;
 	top: 20px;
 }
 
@@ -67,7 +67,7 @@ body {
 
 /* home */
 #home {
-	margin: 50px 50px 50px 150px;
+	margin: 50px 50px;
 }
 
 
@@ -76,6 +76,7 @@ body {
 nav {
 	background: #049BCB;
 	padding: 20px 10px;
+	text-align: center;
 }
 
 nav ul {
