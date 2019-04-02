@@ -41,7 +41,7 @@ app.use('/home', profileRoutes);
 
 
 app.get('/', (req, res) => {
-    res.render('landingPage.ejs')
+    res.render('landingPage')
 });
 
 app.listen(port, () => {
