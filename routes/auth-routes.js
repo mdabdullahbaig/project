@@ -27,7 +27,7 @@ res.render('register');
 router.post('/register', (req, res) => {
     req.body.username
     req.body.password
-    User.register(new User({username: req.body.username}), req.body.password, (err, user) => {
+    User.register(new User({username: req.body.username,firstname: req.body.firstname, lastname: req.body.lastname,mobileno:req.body.mobileno}), req.body.password, (err, user) => {
         if(err) {
             console.log(err);
             return res.render('register');
