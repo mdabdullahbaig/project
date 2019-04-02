@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, 
+        initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
 
 
 
@@ -23,8 +24,6 @@
 
     <!-- Add CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
-    <!-- add title -->
     <title>BiharSuper50</title>
     <meta name="og_title" property="og:title"
         content="BSEB Objective Question,Bihar Board Objective Question,50 Number Objective Number,Model Paper For Bihar Board,10th Class Objective Question,Math Objective Question For Bihar Board,Math Objective Question For BSEB,BiharSuper50,Science Objective Question For Bihar Board,Science Objective Question For BSEB,BSEB Model Question" />
@@ -44,18 +43,24 @@
             <span></span>
         </div>
         <ul>
-            <li><a href=""><i class="fas fa-home"></i>Home</a></li>
+
+            <li><img src="<%= user.thumbnail%>" class="img-circle" alt="Responsive image"></li>
+            <li style="padding:0px 15px;"><%= user.username%></li>
+            <li style="padding:0px 15px; overflow: hidden; border-bottom: 1px solid rgb(199, 194, 194);">
+                <h6><%=user.email%></h6>
+            </li>
+            <li><i class="fas fa-home"></i> Home</li>
             <li><a href=""><i class="fas fa-address-book"></i>Contact</a></li>
-            <li><a href=""><i class="far fa-address-card"></i>About Us</a></li>
-            <li style="border-bottom: 1px solid rgb(199, 194, 194);"><a href="/auth/login"><i
-                        class="fas fa-sign-in-alt"></i>Login</a></li>
+            <li><a href=""><i class="fas fa-address-card"></i>About Us</a></li>
+            <li><a href="/auth/logout"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+
 
         </ul>
     </div>
     <!-- navbar  -->
     <nav>
         <ul>
-            <li id="brand"><a href="/"><b>Bihar</b>Super<em>50</em></a></li>
+            <li id="brand"><a href=""><b>Bihar</b>Super<em>50</em></a></li>
             <li> <a href="">Abc</a></li>
             <li><a href="">Zyz</a></li>
 
@@ -129,6 +134,7 @@
             </div>
         </div>
     </div>
+
 
 
     <!-- Latest compiled and minified JavaScript -->

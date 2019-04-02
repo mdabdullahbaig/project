@@ -35,13 +35,13 @@ mongoose.Promise = global.Promise;
 const port = process.env.PORT || 3000;
 
 app.use('/auth', authRoutes);
-app.use('/profile', profileRoutes);
+app.use('/home', profileRoutes);
 
 
 
 
 app.get('/', (req, res) => {
-    res.render('index.ejs')
+    res.render('landingPage.ejs')
 });
 
 app.listen(port, () => {
