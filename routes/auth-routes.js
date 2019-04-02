@@ -1,16 +1,42 @@
 var router = require('express').Router();
 var passport = require('passport');
+const User = require('../models/user');
 
 
 //auth login
 router.get('/login', (req, res) => {
     res.render('login')
 });
+//post login
+router.post('/login', passport.authenticate('local', {
+    successRedirect: '/home',
+    failureRedirect: '/login'
+}), function(req, res) {});
 
 //auth logout
 router.get('/logout', (req, res) => {
     req.logout();
     res.redirect('/');
+});
+
+//register route 
+router.get('/register', (req, res) => {
+res.render('register');
+});
+// register post
+router.post('/register', (req, res) => {
+    req.body.username
+    req.body.password
+    User.register(new User({username: req.body.username}), req.body.password, (err, user) => {
+        if(err) {
+            console.log(err);
+            return res.render('register');
+        } else {
+            passport.authenticate('local')(req, res, function() {
+                res.redirect('/home');
+            })
+        }
+    })
 });
 
 //auth with google+

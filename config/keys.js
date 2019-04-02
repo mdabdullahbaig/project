@@ -14,5 +14,8 @@ module.exports = {
     },
     session: {
         cookieKey: 'thisisbiharsuper50baig'
+    },
+    expsession: {
+        secret: 'thisisthebiharsuper50baig'
     }
 };

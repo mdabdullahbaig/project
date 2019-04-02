@@ -2,6 +2,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
+var passportStrategy = require('passport-local');
+var passportLocalMongoose = require('passport-local-mongoose');
 var authRoutes = require('./routes/auth-routes');
 var profileRoutes = require('./routes/profile-routes');
 var keys = require('./config/keys');
@@ -13,12 +15,19 @@ var app = express();
 //set  view engine for ejs
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 
 //set cookie-session
 app.use(cookieSession({
     maxAge:24*60*60*1000,
     keys: [keys.session.cookieKey]
+}));
+//set express-session
+app.use(require('express-session')({
+    secret: [keys.expsession.secret],
+    resave: false,
+    saveUninitialized: false
 }));
 
 //initialize passport
@@ -43,6 +52,7 @@ app.use('/home', profileRoutes);
 app.get('/', (req, res) => {
     res.render('landing-page.ejs')
 });
+
 
 app.listen(port, () => {
     console.log('Server has been started!!!');

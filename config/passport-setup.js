@@ -1,19 +1,23 @@
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
-
+var passportStrategy = require('passport-local');
 const keys = require('./keys');
 const User = require('../models/user');
 
-
+//passport local Strategy
+passport.use(new passportStrategy(User.authenticate()));
+//serialize user
 passport.serializeUser((user, done) => {
     done(null, user.id);
 });
+//deserialize user
 passport.deserializeUser((id, done) => {
     User.findById(id).then((user) => {
         done(null, user);
     });
 });
 
+//Google strategy
 passport.use(
     new GoogleStrategy({
         // options for google strategy
@@ -47,3 +51,4 @@ passport.use(
         });
     })
 );
+
