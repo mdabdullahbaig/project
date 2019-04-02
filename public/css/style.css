@@ -24,7 +24,7 @@ body {
 	position: fixed;
 	width: 230px;
 	height: 650px;
-	background-color: #000;
+	background: #000;
 	left: -230px;
 	transition: all 200ms linear;
 	text-align: left
@@ -33,6 +33,7 @@ body {
 
 #sidebar.active {
 	left: 0px;
+	
 }
 
 #sidebar ul li {
