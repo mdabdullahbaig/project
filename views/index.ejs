@@ -44,7 +44,7 @@
         </div>
         <ul>
 
-            <li><img src="<%= user.thumbnail%>" class="img-circle" alt="Responsive image"></li>
+            <li><img src="<%= (user.thumbnail) || ('image/googlephoto.jpg')%>" class="img-circle" alt="Responsive image"></li>
             <li style="padding:0px 15px;"><h6><%= (user.firstname + user.lastname)||(user.username)%></h6></li>
             <li style="padding:0px 15px; overflow: hidden; border-bottom: 1px solid rgb(199, 194, 194);">
                 <h6><%=user.email%></h6>
