@@ -48,31 +48,14 @@
                 <span class="navbar-brand" style="font-size:20px;cursor:pointer; margin: 0px 0px"
                     onclick="openNav()">&#9776;</span>
 
-                <a class="navbar-brand" href="/"><b>Bihar</b><em>Super50</em></a>
+                <a class="navbar-brand" href="/"  style="color:#CB044F;font-size: 20px"><b>Bihar</b><em>Super50</em></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                            aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
+                
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
+                    
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                             aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -84,6 +67,9 @@
                             <li><a href="#">Separated link</a></li>
                         </ul>
                     </li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -94,15 +80,14 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <h6><img src="<%= (user.thumbnail) || ('image/googlephoto.jpg')%>" class="img-circle" alt="Responsive image">
         </h6>
-        <h6><%= (user.firstname + user.lastname)||(user.username)%></h6>
+        <h6><%= (user.firstname + " " + user.lastname)||(user.username)%></h6>
         <h6 style="padding: 0px 0px 8px 25px; overflow: hidden; border-bottom: 1px solid rgb(199, 194, 194);">
             <%=(user.email)||(user.username)%></h6>
 
         <a href=""><i class="fas fa-home"></i> Home</a>
         <a href=""><i class="fas fa-address-book"></i>Contact</a>
         <a href=""><i class="fas fa-address-card"></i>About Us</a>
-        <a href="/auth/logout" style="border-top: 1px solid rgb(199, 194, 194);"><i
-                class="fas fa-sign-out-alt"></i>Logout</a>
+        <a href="/auth/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
     </div>
 
 
