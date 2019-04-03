@@ -35,15 +35,67 @@
 </head>
 
 <body>
-  <!-- navbar -->
-  <nav>
-    <ul>
-      <li id="brand"><a href="/"><b>Bihar</b>Super<em>50</em></a></li>
-      <li> <a href="">Abc</a></li>
-      <li><a href="">Zyz</a></li>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 
-    </ul>
+          <i class="fas fa-caret-down"></i>
+        </button>
+        <span class="navbar-brand" style="font-size:20px;cursor:pointer; margin: 0px 0px"
+          onclick="openNav()">&#9776;</span>
+
+        <a class="navbar-brand" href="/"><b>Bihar</b><em>Super50</em></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
   </nav>
+
+  <!-- sidebar -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href=""><i class="fas fa-home"></i> Home</a>
+    <a href=""><i class="fas fa-address-book"></i>Contact</a>
+    <a href=""><i class="fas fa-address-card"></i>About Us</a>
+    <a href="/auth/login"><i class="fas fa-sign-out-alt"></i>Login | SignUp</a>
+  </div>
 
   <!-- Googlpluspage -->
   <div id="google">
@@ -59,7 +111,8 @@
       <button type="submit" class="btn btn-success">Login</button>
       <a href="/auth/google"><button type="button" class="btn btn-danger"><i class="fab fa-google-plus-g"></i>
           Login</button></a>
-      <a href="/auth/register"><button type="button" class="btn btn-info"><i class="fas fa-user-plus"></i> Sign Up</button></a> <br>
+      <a href="/auth/register"><button type="button" class="btn btn-info"><i class="fas fa-user-plus"></i> Sign
+          Up</button></a> <br>
       <br>
 
     </form>
@@ -68,12 +121,13 @@
     <a href="/" class="btn btn-link">Back</a>
 
   </div>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
   </script>
-  <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
-
 
 
 </body>
