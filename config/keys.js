@@ -1,7 +1,7 @@
 module.exports = {
     google: {
         clientID: '468435296002-j1aah7fu9j2vttsq73nsc6q6accrd51n.apps.googleusercontent.com',
-        clientSecret: 'TWjB7nx5FnwIn4Hzb6kIDZZe'
+        clientSecret: 'icOfnXryPx8nz70Z4WUVwcbI'
     },
 
     mongodb: {
