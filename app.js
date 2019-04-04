@@ -6,6 +6,7 @@ var passportStrategy = require('passport-local');
 var passportLocalMongoose = require('passport-local-mongoose');
 var authRoutes = require('./routes/auth-routes');
 var profileRoutes = require('./routes/profile-routes');
+// var productRoutes = require('./routes/product-routes');
 var keys = require('./config/keys');
 var passportSetup = require('./config/passport-setup');
 var cookieSession = require('cookie-session');
@@ -17,6 +18,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 //set cookie-session
 app.use(cookieSession({
@@ -49,7 +51,7 @@ const port = process.env.PORT || 3000;
 
 app.use('/auth', authRoutes);
 app.use('/home', profileRoutes);
-
+// app.use('/product', productRoutes);
 
 
 

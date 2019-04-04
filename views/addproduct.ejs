@@ -20,10 +20,11 @@
 
 
     <!-- add drawer.js -->
-    <script src="js/drawer.js"></script>
+    <script src="/js/drawer.js"></script>
 
     <!-- Add CSS -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
     <title>AnasEnterprises | AddProduct</title>
     <meta name="og_title" property="og:title"
         content="BSEB Objective Question,Bihar Board Objective Question,50 Number Objective Number,Model Paper For Bihar Board,10th Class Objective Question,Math Objective Question For Bihar Board,Math Objective Question For BSEB,BiharSuper50,Science Objective Question For Bihar Board,Science Objective Question For BSEB,BSEB Model Question" />
@@ -77,7 +78,7 @@
     <!-- sidebar -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <h6><img src="<%= (user.thumbnail) || ('image/googlephoto.jpg')%>" class="img-circle" alt="Responsive image">
+        <h6><img src="<%= (user.thumbnail) || ('/image/googlephoto.jpg')%>" class="img-circle" alt="Responsive image">
             <% if(currentUser && currentUser.isSeller){%>
             <i class="fas fa-user-shield"></i>Admin
             <%} %>
@@ -93,60 +94,36 @@
         <a href=""><i class="fas fa-home"></i> Home</a>
         <a href=""><i class="fas fa-address-book"></i>Contact</a>
         <a href=""><i class="fas fa-address-card"></i>About Us</a>
-        <% if(currentUser && currentUser.isSeller){%>
-        <a href=""><i class="fas fa-cart-plus"></i></i>Add Product</a>
-        <%} %>
         <a href="/auth/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
     </div>
 
     <!-- form -->
     <div id="signup">
         <form action="/home" method="POST" class="form-horizontal">
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <h1>Add new Product</h1>
+            
+                <div class="form-group">
                     <input type="text" class="form-control" name="productname" placeholder="Product name">
                 </div>
-
-            </div>
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <h1>Add Product Url-1</h1>
+                <div class="form-group">
                     <input type="text" class="form-control" name="imgurl01" placeholder="Image Url-1">
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <h1>Add Product Url-2</h1>
+                <div class="form-group">
                     <input type="text" class="form-control" name="imgurl02" placeholder="Image Url-2">
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <h1>Add Product Url-3</h1>
+                <div class="form-group">
                     <input type="text" class="form-control" name="imgurl03" placeholder="Image Url-3">
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <h1>Add Product Url-4</h1>
+                <div class="form-group">
                     <input type="text" class="form-control" name="imgurl04" placeholder="Image Url-4">
                 </div>
-            </div>
-
-            <div class="form-group">
-
-                <div class="col-sm-10">
-                    <h1>Price</h1>
+                 <div class="form-group">
                     <input type="text" class="form-control" name="price" placeholder="Price">
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
+                <div class="form-group">
                     <button type="submit" class="btn btn-success"> Submit</button>
-                    <a href="/home"> <button class="btn btn-primary">Go Back</button> </a>
+                    
                 </div>
-            </div>
+            
         </form>
     </div>
 

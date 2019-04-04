@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const isloggin = (req, res, next) => {
+const authCheck = (req, res, next) => {
     if(!req.user){
         res.redirect('/auth/login');
     } else {
@@ -8,13 +8,12 @@ const isloggin = (req, res, next) => {
     }
 };
 
-router.get('/', isloggin, (req, res) => {
+router.get('/', authCheck, (req, res) => {
     res.render('index', { user: req.user });
 });
 
-router.get('/addproduct', isloggin, (req,res) => {
-    res.render('addproduct', {user: req.user});
+router.get('/addproduct', authCheck, (req, res) => {
+    res.render('addproduct', { user: req.user });
 });
-
 
 module.exports = router;
