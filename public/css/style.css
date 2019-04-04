@@ -43,10 +43,13 @@ body {
 .sidenav p {
 	color: #f1f1f1;
 	padding: 0px 0px 8px 25px;
+	font-size: 10px;
+	overflow: hidden;
 }
 .sidenav h6 {
 	color: #f1f1f1;
 	padding: 0px 0px 8px 25px;
+	
 }
   
 .sidenav a {
