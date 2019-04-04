@@ -80,8 +80,13 @@ body {
 #home {
 	margin: 5px 20px;
 }
-/* navbar */
 
+#home-login {
+	margin: 20px 20px;
+	width: auto;
+	height: auto;
+}
+/* navbar */
 
 nav {
 	padding: 5px 5px;
