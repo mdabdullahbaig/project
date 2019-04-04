@@ -48,14 +48,14 @@
                 <span class="navbar-brand" style="font-size:20px;cursor:pointer; margin: 0px 0px"
                     onclick="openNav()">&#9776;</span>
 
-                <a class="navbar-brand" href="/"  style="color:#CB044F;font-size: 20px"><b>Anas</b>Enterprises</a>
+                <a class="navbar-brand" href="/home" style="color:#CB044F;font-size: 20px"><b>Anas</b>Enterprises</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                
+
                 <ul class="nav navbar-nav navbar-right">
-                    
+
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                             aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -87,11 +87,87 @@
         <a href=""><i class="fas fa-home"></i> Home</a>
         <a href=""><i class="fas fa-address-book"></i>Contact</a>
         <a href=""><i class="fas fa-address-card"></i>About Us</a>
+        <% if(currentUser && currentUser.isSeller){%>
+        <a href=""><i class="fas fa-user-shield"></i>Admin</a>
+        <%} %>
         <a href="/auth/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
     </div>
 
     <!-- homepage -->
     <div id="home">
+        <div class="row text-center">
+            <div class="col-md-3 col-xs-6 col-sm-3">
+                <div class="thumbnail">
+                    <img src="https://res.cloudinary.com/diirdewi4/image/upload/q_51/v1554366698/IMG_6289.jpg" alt="">
+                    <h6>Product Name</h6>
+                    <h6>Rs. 999</h6>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-xs-6 col-sm-3">
+
+                <div class="thumbnail">
+                    <img src="https://res.cloudinary.com/diirdewi4/image/upload/q_51/v1554366698/IMG_6289.jpg" alt="">
+                    <h6>Product Name</h6>
+                    <h6>Rs. 999</h6>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-xs-6 col-sm-3">
+
+                <div class="thumbnail">
+                    <img src="https://res.cloudinary.com/diirdewi4/image/upload/q_auto:low/v1554368048/IMG_6283.jpg"
+                        alt="">
+                    <h6>Product Name</h6>
+                    <h6>Rs. 999</h6>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-xs-6 col-sm-3">
+
+                <div class="thumbnail">
+                    <img src="https://res.cloudinary.com/diirdewi4/image/upload/q_51/v1554366698/IMG_6289.jpg" alt="">
+                    <h6>Product Name</h6>
+                    <h6>Rs. 999</h6>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6 col-sm-3">
+                <div class="thumbnail">
+                    <img src="https://res.cloudinary.com/diirdewi4/image/upload/q_51/v1554366698/IMG_6289.jpg" alt="">
+                    <h6>Product Name</h6>
+                    <h6>Rs. 999</h6>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-xs-6 col-sm-3">
+
+                <div class="thumbnail">
+                    <img src="https://res.cloudinary.com/diirdewi4/image/upload/q_51/v1554366698/IMG_6289.jpg" alt="">
+                    <h6>Product Name</h6>
+                    <h6>Rs. 999</h6>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-xs-6 col-sm-3">
+
+                <div class="thumbnail">
+                    <img src="https://res.cloudinary.com/diirdewi4/image/upload/q_auto:low/v1554368048/IMG_6283.jpg"
+                        alt="">
+                    <h6>Product Name</h6>
+                    <h6>Rs. 999</h6>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-xs-6 col-sm-3">
+
+                <div class="thumbnail">
+                    <img src="https://res.cloudinary.com/diirdewi4/image/upload/q_51/v1554366698/IMG_6289.jpg" alt="">
+                    <h6>Product Name</h6>
+                    <h6>Rs. 999</h6>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-md-3">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, nam? Eos maxime reiciendis

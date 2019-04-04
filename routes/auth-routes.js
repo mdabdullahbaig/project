@@ -25,18 +25,41 @@ res.render('register');
 });
 // register post
 router.post('/register', (req, res) => {
-    req.body.username
-    req.body.password
-    User.register(new User({username: req.body.username,firstname: req.body.firstname, lastname: req.body.lastname,mobileno:req.body.mobileno}), req.body.password, (err, user) => {
-        if(err) {
-            console.log(err);
-            return res.render('register');
-        } else {
-            passport.authenticate('local')(req, res, function() {
-                res.redirect('/home');
-            })
-        }
-    })
+    // req.body.username
+    // req.body.password
+    // User.register(new User({username: req.body.username,firstname: req.body.firstname, lastname: req.body.lastname,mobileno:req.body.mobileno}), req.body.password, (err, user) => {
+    //     if(err) {
+    //         console.log(err);
+    //         return res.render('register');
+    //     } else {
+    //         passport.authenticate('local')(req, res, function() {
+    //             res.redirect('/home');
+    //         })
+    //     }
+    // })
+    var newUser = new User(
+        {
+        username: req.body.username,
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        mobileno: req.body.mobileno,
+
+       });
+    if(req.body.isSeller === 'seller'){
+        newUser.isSeller = true ;
+        //res.redirect("/homeseller");
+    }
+    User.register(newUser,req.body.password,function(err,user){
+        if(err){
+            
+            req.flash("error", err.message);
+            return res.render("register");
+        }  else {
+                    passport.authenticate('local')(req, res, function() {
+                        res.redirect('/home');
+                    })
+                }
+    });
 });
 
 //auth with google+

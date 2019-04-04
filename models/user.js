@@ -9,7 +9,11 @@ var userSchema = new Schema({
   firstname: String,
   lastname: String,
   mobileno: Number,
-  password: String
+  password: String,
+  isSeller: {
+    type: Boolean,
+    default: false
+}
 });
 
 userSchema.plugin(passportLocalMongoose);
