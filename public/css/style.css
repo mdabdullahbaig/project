@@ -80,6 +80,9 @@ body {
 #home {
 	margin: 5px 20px;
 }
+#home-index {
+	margin: 20px 20px
+}
 
 #home-login {
 	margin: 20px 20px;
