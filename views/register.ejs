@@ -1,80 +1,81 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, 
-        initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
-    <title>SingUp | NewUser </title>
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css" rel="stylesheet">
 
     <!-- add drawer.js -->
-  <script src="/js/drawer.js"></script>
+    <script src="/js/drawer.js"></script>
 
-  <!-- Add CSS -->
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
-<!-- title -->
+    <!-- Add CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
     <title>AnasEnterprises | Register | SignUp | NewUser</title>
-    <meta name="og_title" property="og:title"
-        content="BSEB Objective Question,Bihar Board Objective Question,50 Number Objective Number,Model Paper For Bihar Board,10th Class Objective Question,Math Objective Question For Bihar Board,Math Objective Question For BSEB,BiharSuper50,Science Objective Question For Bihar Board,Science Objective Question For BSEB,BSEB Model Question" />
-    <meta name="Keywords"
-        content="BSEB Objective Question,Bihar Board Objective Question,50 Number Objective Number,Model Paper For Bihar Board,10th Class Objective Question,Math Objective Question For Bihar Board,Math Objective Question For BSEB,BiharSuper50,Science Objective Question For Bihar Board,Science Objective Question For BSEB,BSEB Model Question" />
-    <meta name="Description" property="og:description"
-        content="This is the Online Website for BSEB Objective Question,Bihar Board Objective Question,50 Number Objective Number,Model Paper For Bihar Board,10th Class Objective Question,Math Objective Question For Bihar Board,Math Objective Question For BSEB,BiharSuper50,Science Objective Question For Bihar Board,Science Objective Question For BSEB,BSEB Model Question, This is Biggest BiharSuper50 Question Store where you can find almost every quesion which is come in your BSEB or Bihar Board 10th class." />
-
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark aqua-gradient">
+        <!-- sidebar -->
+        <span class="navbar-brand" style="font-size:20px;cursor:pointer; margin: 0px 12px"
+            onclick="openNav()">&#9776;</span>
 
-                    <i class="fas fa-caret-down"></i>
-                </button>
-                <span class="navbar-brand" style="font-size:20px;cursor:pointer; margin: 0px 0px"
-                    onclick="openNav()">&#9776;</span>
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="/"><b>Anas</b>Enterprises</a>
 
-                <a class="navbar-brand" href="/"  style="color:#CB044F;font-size: 20px"><b>Anas</b>Enterprises</a>
-            </div>
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-caret-down"></i>
+        </button>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-               
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
 
-                <ul class="nav navbar-nav navbar-right">
-                   
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                            aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+
+
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+
+            </ul>
+            <!-- Links -->
+
+            <form class="form-inline">
+                <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+        </div>
+        <!-- Collapsible content -->
+
     </nav>
-
+    <!--/.Navbar-->
     <!-- sidebar -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -83,51 +84,126 @@
         <a href=""><i class="fas fa-address-card"></i>About Us</a>
         <a href="/auth/login"><i class="fas fa-sign-out-alt"></i>Login | SignUp</a>
     </div>
+    <div id="home-login">
 
-    <!-- Googlpluspage -->
-    <div id="signup">
-        <form action="/auth/register" method="POST">
-            <div class="form-group">
+        <!-- Material form register -->
+        <div class="card">
 
-                <input type="name" name="firstname" class="form-control" id="exampleInputEmail1"
-                    placeholder="First Name">
+            <h5 class="card-header aqua-gradient white-text text-center py-4">
+                <strong>Sign up</strong>
+            </h5>
+
+            <!--Card content-->
+            <div class="card-body px-lg-5 pt-0">
+
+                <!-- Form -->
+                <form action="/auth/register" method="POST" class="text-center" style="color: #757575;">
+
+                    <div class="form-row">
+                        <div class="col">
+                            <!-- First name -->
+                            <div class="md-form">
+                                <input name="firstname" type="text" id="materialRegisterFormFirstName" class="form-control">
+                                <label for="materialRegisterFormFirstName">First name</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Last name -->
+                            <div class="md-form">
+                                <input name="lastname" type="text" id="materialRegisterFormLastName" class="form-control">
+                                <label for="materialRegisterFormLastName">Last name</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="md-form mt-0">
+                        <input name="username" type="email" id="materialRegisterFormEmail" class="form-control">
+                        <label for="materialRegisterFormEmail">E-mail</label>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="md-form">
+                        <input name="password" type="password" id="materialRegisterFormPassword" class="form-control"
+                            aria-describedby="materialRegisterFormPasswordHelpBlock">
+                        <label for="materialRegisterFormPassword">Password</label>
+                    </div>
+
+                    <!-- Phone number -->
+                    <div class="md-form">
+                        <input name="mobileno" type="number" id="materialRegisterFormPhone" class="form-control"
+                            aria-describedby="materialRegisterFormPhoneHelpBlock">
+                        <label for="materialRegisterFormPhone">Phone number</label>
+                    </div>
+
+                     <!-- Seller -->
+                     <div class="md-form">
+                            <input name="isSeller" type="text" id="" class="form-control"
+                                aria-describedby="materialRegisterFormPhoneHelpBlock">
+                            <label for="materialRegisterFormPhone">Admin Code</label>
+                        </div>
+
+                    <!-- Sign up button -->
+                    <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0"
+                        type="submit">Sign in</button>
+
+                    <!-- Social register -->
+
+
+                    <a type="button" class="btn-floating btn-fb btn-sm">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a type="button" class="btn-floating btn-tw btn-sm">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a type="button" class="btn-floating btn-li btn-sm">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a type="button" class="btn-floating btn-git btn-sm">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <hr>
+
+                    <!-- Terms of service -->
+                    <p>By clicking
+                        <em>Sign up</em> you agree to our
+                        <a href="" target="_blank">terms of service</a>
+
+                </form>
+                <!-- Form -->
+
             </div>
 
-            <div class="form-group">
-                <div class="form-group">
-
-                    <input type="name" name="lastname" class="form-control" placeholder="Last Name">
-                </div>
-                <div class="form-group">
-
-                    <input type="number" name="mobileno" class="form-control" placeholder="Mobile No.">
-                </div>
-
-                <input type="email" name="username" class="form-control" placeholder="Email">
-            </div>
-            <div class="form-group">
-
-                <input type="password" name="password" class="form-control" placeholder="Password">
-            </div>
-            <div class="form-group">
-
-                    <input type="name" name="isSeller" class="form-control" placeholder="AdminCode only for Seller">
-                </div>
-            <button type="submit" class="btn btn-success">Submit</button>
-            <a href="/auth/login" class="btn btn-info">Back</a>
-
-        </form>
-
-
+        </div>
+        <!-- Material form register -->
     </div>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-    </script>
 
+
+    <!-- Footer -->
+    <footer class="page-footer font-small aqua-gradient">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js">
+    </script>
 </body>
 
 </html>
