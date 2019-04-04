@@ -25,18 +25,6 @@ res.render('register');
 });
 // register post
 router.post('/register', (req, res) => {
-    // req.body.username
-    // req.body.password
-    // User.register(new User({username: req.body.username,firstname: req.body.firstname, lastname: req.body.lastname,mobileno:req.body.mobileno}), req.body.password, (err, user) => {
-    //     if(err) {
-    //         console.log(err);
-    //         return res.render('register');
-    //     } else {
-    //         passport.authenticate('local')(req, res, function() {
-    //             res.redirect('/home');
-    //         })
-    //     }
-    // })
     var newUser = new User(
         {
         username: req.body.username,
