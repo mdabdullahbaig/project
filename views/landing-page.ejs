@@ -82,7 +82,13 @@
         <a href=""><i class="fas fa-home"></i> Home</a>
         <a href=""><i class="fas fa-address-book"></i>Contact</a>
         <a href=""><i class="fas fa-address-card"></i>About Us</a>
+        <% if(currentUser) {%>
+        <a href="/auth/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+
+        <%} else {%>
         <a href="/auth/login"><i class="fas fa-sign-out-alt"></i>Login | SignUp</a>
+        <%}%>
+                
     </div>
     <!-- homepage -->
     <div id="home">
