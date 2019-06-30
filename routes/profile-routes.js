@@ -53,12 +53,15 @@ router.get('/', authCheck, (req, res) => {
     }
 });
 
-
+router.get('/aboutpage', authCheck, (req, res) => {
+    res.render('aboutpage');
+});
 router.get('/addproduct', authCheck, (req, res) => {
     res.render('addproduct', {
         user: req.user
     });
 });
+
 
 router.post('/addproduct', authCheck, (req, res) => {
 

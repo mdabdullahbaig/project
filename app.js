@@ -58,9 +58,7 @@ app.use('/home', profileRoutes);
 app.get('/', (req, res) => {
     res.render('landing-page.ejs')
 });
-app.get('/aboutpage', (req, res) => {
-    res.render('aboutpage.ejs')
-});
+
 
 app.listen(port, () => {
     console.log('Server has been started!!!');
