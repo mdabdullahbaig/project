@@ -1,0 +1,201 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSSprime -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- add drawer.js -->
+    <script src="js/drawer.js"></script>
+
+    <!-- Add CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>AnasEnterprises | AboutPage</title>
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark aqua-gradient">
+        <!-- sidebar -->
+        <span class="navbar-brand" style="font-size:20px;cursor:pointer; margin: 0px 7px 0px 0px;"
+            onclick="openNav()">&#9776;</span>
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="/home"><b>Anas</b>Enterprises</a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-caret-down"></i>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto" style="margin: 5px 0px 0px 7px">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+
+
+                <!-- Dropdown -->
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li> -->
+
+            </ul>
+            <!-- Links -->
+
+            <form class="form-inline">
+                <div class="md-form my-10">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+        </div>
+        <!-- Collapsible content -->
+
+    </nav>
+    <!--/.Navbar-->
+    <!-- sidebar -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h6><img src="<%= (user.thumbnail) || ('/image/googlephoto.jpg')%>" alt="thumbnail"
+                class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
+            <% if(currentUser && currentUser.isSeller){%>
+            <i class="fas fa-user-shield"></i>Admin
+            <%} %>
+        </h6>
+        <% if(currentUser && currentUser.isSeller){%>
+        <h6><%= (user.firstname + " " + user.lastname)%></h6>
+        <%} %>
+        <p><%=user.username%></p>
+
+        <p style="padding: 0px 0px 8px 25px; overflow: hidden; border-bottom: 1px solid rgb(199, 194, 194);">
+            <%=user.email%></p>
+
+        <a href="/home"><i class="fas fa-home"></i> Home</a>
+        <a href=""><i class="fas fa-address-book"></i>Contact</a>
+        <a href=""><i class="fas fa-address-card"></i>About Us</a>
+        <% if(currentUser && currentUser.isSeller){%>
+        <a href="/home/addproduct"><i class="fas fa-cart-plus"></i></i>Add Product</a>
+        <%} %>
+        <a href="/auth/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+    </div>
+
+    <div id="about">
+            <div class="row">
+                    <div class="col-md-12">
+                  
+                      <div id="mdb-lightbox-ui"></div>
+                  
+                      <div class="mdb-lightbox">
+                  
+                        <figure class="col-md-4">
+                          <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg" data-size="1600x1067">
+                            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" class="img-fluid">
+                          </a>
+                        </figure>
+                  
+                        <figure class="col-md-4">
+                          <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg" data-size="1600x1067">
+                            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg" class="img-fluid" />
+                          </a>
+                        </figure>
+                  
+                        <figure class="col-md-4">
+                          <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg" data-size="1600x1067">
+                            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(152).jpg" class="img-fluid" />
+                          </a>
+                        </figure>
+                  
+                        <figure class="col-md-4">
+                          <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg" data-size="1600x1067">
+                            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(42).jpg" class="img-fluid" />
+                          </a>
+                        </figure>
+                  
+                        <figure class="col-md-4">
+                          <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(151).jpg" data-size="1600x1067">
+                            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(151).jpg" class="img-fluid" />
+                          </a>
+                        </figure>
+                  
+                        <figure class="col-md-4">
+                          <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" data-size="1600x1067">
+                            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(40).jpg" class="img-fluid" />
+                          </a>
+                        </figure>
+                  
+                        <figure class="col-md-4">
+                          <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(148).jpg" data-size="1600x1067">
+                            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(148).jpg" class="img-fluid" />
+                          </a>
+                        </figure>
+                  
+                        <figure class="col-md-4">
+                          <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(147).jpg" data-size="1600x1067">
+                            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" class="img-fluid" />
+                          </a>
+                        </figure>
+                  
+                        <figure class="col-md-4">
+                          <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(149).jpg" data-size="1600x1067">
+                            <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(149).jpg" class="img-fluid" />
+                          </a>
+                        </figure>
+                  
+                      </div>
+                  
+                    </div>
+                  </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small aqua-gradient">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="/"> AnasEnterprises</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js">
+    </script>
+</body>
+
+</html>
