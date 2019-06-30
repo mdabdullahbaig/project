@@ -58,7 +58,7 @@ app.use('/home', profileRoutes);
 app.get('/', (req, res) => {
     res.render('landing-page.ejs')
 });
-router.get('/aboutpage', (req, res) => {
+app.get('/aboutpage', (req, res) => {
     res.render('aboutpage.ejs')
 });
 
