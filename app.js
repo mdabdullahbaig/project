@@ -59,7 +59,7 @@ app.get('/', (req, res) => {
     res.render('landing-page.ejs')
 });
 router.get('/aboutpage', (req, res) => {
-    res.render('aboutpage.ejs');
+    res.render('aboutpage.ejs')
 });
 
 app.listen(port, () => {
