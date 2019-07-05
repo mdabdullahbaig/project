@@ -54,7 +54,9 @@ router.get('/', authCheck, (req, res) => {
 });
 
 router.get('/aboutpage', authCheck, (req, res) => {
-    res.render('aboutpage.ejs');
+    res.render('aboutpage', {
+        user: req.user
+    });
 });
 router.get('/addproduct', authCheck, (req, res) => {
     res.render('addproduct', {
