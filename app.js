@@ -59,7 +59,7 @@ app.get('/', (req, res) => {
     res.render('landing-page.ejs')
 });
 app.get('/aboutpage', (req, res) => {
-    res.render('aboutpage');
+    res.render('aboutpage.ejs')
 });
 
 
