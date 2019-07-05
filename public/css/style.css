@@ -87,6 +87,11 @@ body {
 #home {
 	margin: 5px 20px;
 }
+#gallery {
+	width: auto;
+	height: auto;
+	text-align: center;
+}
 #home-index {
 	margin: 20px 20px
 }
