@@ -58,6 +58,9 @@ app.use('/home', profileRoutes);
 app.get('/', (req, res) => {
     res.render('landing-page.ejs')
 });
+app.get('/aboutpage', (req, res) => {
+    res.render('aboutpage');
+});
 
 
 app.listen(port, () => {

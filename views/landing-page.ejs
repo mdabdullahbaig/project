@@ -1,251 +1,96 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css" rel="stylesheet">
 
-    <!-- add drawer.js -->
-    <script src="/js/drawer.js"></script>
+  <!-- add drawer.js -->
+  <script src="/js/drawer.js"></script>
 
-    <!-- Add CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <!-- Add CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-    <title>AnasEnterprises | homepage | LandingPage</title>
+  <title>AnasEnterprises | homepage | LandingPage</title>
 </head>
 
 <body>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark aqua-gradient">
-        <!-- sidebar -->
-        <span class="navbar-brand" style="font-size:20px;cursor:pointer; margin: 0px 12px"
-            onclick="openNav()">&#9776;</span>
-
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="/"><b>Anas</b>Enterprises</a>
-
-        <!-- Collapse button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-caret-down"></i>
-        </button>
-
-        <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="basicExampleNav">
-
-            <!-- Links -->
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-
-
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-
-            </ul>
-            <!-- Links -->
-
-            <form class="form-inline">
-                <div class="md-form my-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                </div>
-            </form>
-        </div>
-        <!-- Collapsible content -->
-
-    </nav>
-    <!--/.Navbar-->
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark aqua-gradient">
     <!-- sidebar -->
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/home"><i class="fas fa-home"></i> Home</a>
-        <a href=""><i class="fas fa-address-book"></i>Contact</a>
-        <a href=""><i class="fas fa-address-card"></i>About Us</a>
-        <% if(currentUser) {%>
-        <a href="/auth/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+    <span class="navbar-brand" style="font-size:20px;cursor:pointer; margin: 0px 12px"
+      onclick="openNav()">&#9776;</span>
 
-        <%} else {%>
-        <a href="/auth/login"><i class="fas fa-sign-out-alt"></i>Login | SignUp</a>
-        <%}%>
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="/"><b>Anas</b>Enterprises</a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-caret-down"></i>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+
+      </ul>
+      <!-- Links -->
+
+      <form class="form-inline">
+        <div class="md-form my-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        </div>
+      </form>
+    </div>
+    <!-- Collapsible content -->
+
+  </nav>
+  <!--/.Navbar-->
+  <!-- sidebar -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/home"><i class="fas fa-home"></i> Home</a>
+    <a href=""><i class="fas fa-address-book"></i>Contact</a>
+    <a href=""><i class="fas fa-address-card"></i>About Us</a>
+    <% if(currentUser) {%>
+    <a href="/auth/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+
+    <%} else {%>
+    <a href="/auth/login"><i class="fas fa-sign-out-alt"></i>Login | SignUp</a>
+    <%}%>
                 
     </div>
-    <!-- homefirst -->
-    <div id="">
-            <div class="container">
-                    <div class="container">
-                            <div class="row">
-                              <div class="col-sm">
-                                <!-- Card -->
-            <div class="card">
-            
-                    <!-- Card image -->
-                    <div class="view overlay">
-                      <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                      <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                      </a>
-                    </div>
-                  
-                    <!-- Card content -->
-                    <div class="card-body">
-                  
-                      <!-- Title -->
-                      <h4 class="card-title">Card title</h4>
-                      <!-- Text -->
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <!-- Button -->
-                      <a href="#" class="btn btn-primary">Button</a>
-                  
-                    </div>
-                  
-                  </div>
-                  <!-- Card -->
-                              </div>
-                              <div class="col-sm">
-                               <!-- Card -->
-            <div class="card">
-            
-                    <!-- Card image -->
-                    <div class="view overlay">
-                      <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                      <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                      </a>
-                    </div>
-                  
-                    <!-- Card content -->
-                    <div class="card-body">
-                  
-                      <!-- Title -->
-                      <h4 class="card-title">Card title</h4>
-                      <!-- Text -->
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <!-- Button -->
-                      <a href="#" class="btn btn-primary">Button</a>
-                  
-                    </div>
-                  
-                  </div>
-                  <!-- Card -->
-                              </div>
-                              <div class="col-sm">
-                                <!-- Card -->
-            <div class="card">
-            
-                    <!-- Card image -->
-                    <div class="view overlay">
-                      <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
-                      <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                      </a>
-                    </div>
-                  
-                    <!-- Card content -->
-                    <div class="card-body">
-                  
-                      <!-- Title -->
-                      <h4 class="card-title">Card title</h4>
-                      <!-- Text -->
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <!-- Button -->
-                      <a href="#" class="btn btn-primary">Button</a>
-                  
-                    </div>
-                  
-                  </div>
-                  <!-- Card -->
-                           
-            </div>
-            
-            
-    </div>
-    <!-- homefirstend -->
-    <!-- homepage -->
-    <div id="home">
-    <!--Carousel Wrapper-->
-<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-2" data-slide-to="1"></li>
-    <li data-target="#carousel-example-2" data-slide-to="2"></li>
-  </ol>
-  <!--/.Indicators-->
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <div class="view">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
-          alt="First slide">
-        <div class="mask rgba-black-light"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Light mask</h3>
-        <p>First text</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <!--Mask color-->
-      <div class="view">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
-          alt="Second slide">
-        <div class="mask rgba-black-strong"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Strong mask</h3>
-        <p>Secondary text</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <!--Mask color-->
-      <div class="view">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
-          alt="Third slide">
-        <div class="mask rgba-black-slight"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Slight mask</h3>
-        <p>Third text</p>
-      </div>
-    </div>
-  </div>
-  <!--/.Slides-->
-  <!--Controls-->
-  <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  <!--/.Controls-->
-</div>
-<!--/.Carousel Wrapper-->    
-    
-</div>
-<!-- home -->
+   
 
 
     <!-- Footer -->
