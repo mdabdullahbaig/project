@@ -53,8 +53,8 @@ router.get('/', authCheck, (req, res) => {
     }
 });
 
-router.get('/aboutpage', authCheck, (req, res) => {
-    res.render('aboutpage', {
+router.get('/details', authCheck, (req, res) => {
+    res.render('details', {
         user: req.user
     });
 });
