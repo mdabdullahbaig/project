@@ -58,6 +58,8 @@ router.get('/details', authCheck, (req, res) => {
         user: req.user
     });
 });
+
+// Product
 router.get('/addproduct', authCheck, (req, res) => {
     res.render('addproduct', {
         user: req.user
@@ -92,8 +94,45 @@ router.post('/addproduct', authCheck, (req, res) => {
     })
 });
 
+// sendmoney
+router.get('/sendmoney', authCheck, (req, res) => {
+    res.render('sendmoney', {
+        user: req.user
+    });
+});
+
+
+router.post('/sendmoney', authCheck, (req, res) => {
+
+    var email = req.body.email;
+    var rupees = req.body.rupees;
+    var massage = req.body.massage;
+    
+    var newSendmoney = {
+        email: email,
+        rupees: rupees,
+        massage: massage,
+        
+    };
+
+    Sendmoney.create(newSendmoney, function (err, newlySend) {
+        if (err) {
+            console.log(err);
+        } else {
+            sendmoney(sendmoney.rupees);
+            console(sendmoney.rupees);
+            res.redirect('/home');
+        }
+    })
+});
+
 function escapeRegex(text) {
     return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
 };
 
+function sendmoney(rupees) {
+ var avlbal = user.avlbalance;
+ var sendrupees = sendmoney.rupees;
+ var avlbal = avlbal-sendrupees ;
+}
 module.exports = router;

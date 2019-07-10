@@ -10,6 +10,9 @@ var userSchema = new Schema({
   lastname: String,
   mobileno: Number,
   password: String,
+  avlbalance: Number,
+  addmoney: Number,
+  sendmoney: Number,
   isSeller: {
     type: Boolean,
     default: false

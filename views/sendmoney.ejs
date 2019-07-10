@@ -110,65 +110,70 @@
 
     <!-- homepage -->
     <div id="home-index">
-        <div class="row text-left">
-            1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates itaque nobis aperiam officia asperiores
-            totam nemo neque vitae doloribus minus? Blanditiis voluptate cupiditate, sed consectetur accusantium maxime a
-            accusamus sit?
-            <br>
-            <!-- Default inline 1-->
-            <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
-            <label class="custom-control-label" for="defaultInline1">1</label>
-            </div>
-            
-            <!-- Default inline 2-->
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
-                <label class="custom-control-label" for="defaultInline2">2</label>
-            </div>
-            
-            <!-- Default inline 3-->
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
-                <label class="custom-control-label" for="defaultInline3">3</label>
-            </div>
-            <!-- Default inline 4-->
-            <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample">
-                    <label class="custom-control-label" for="defaultInline3">4</label>
-            </div>
-            <hr>
 
-            2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates itaque nobis aperiam officia asperiores
-            totam nemo neque vitae doloribus minus? Blanditiis voluptate cupiditate, sed consectetur accusantium maxime a
-            accusamus sit?
-            <br>
-            <!-- Default inline 1-->
-            <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" class="custom-control-input" id="defaultInline5" name="inlineDefaultRadiosExample">
-            <label class="custom-control-label" for="defaultInline1">1</label>
-            </div>
-            
-            <!-- Default inline 2-->
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="defaultInline6" name="inlineDefaultRadiosExample">
-                <label class="custom-control-label" for="defaultInline2">2</label>
-            </div>
-            
-            <!-- Default inline 3-->
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="defaultInline7" name="inlineDefaultRadiosExample">
-                <label class="custom-control-label" for="defaultInline3">3</label>
-            </div>
-            <!-- Default inline 4-->
-            <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" class="custom-control-input" id="defaultInline8" name="inlineDefaultRadiosExample">
-                    <label class="custom-control-label" for="defaultInline3">4</label>
-            </div>
+        <!-- Material form login -->
+        <div class="card">
 
+        <h5 class="card-header info-color white-text text-center py-4">
+          <strong>Send Money</strong>
+        </h5>
+      
+        <!--Card content-->
+        <div class="card-body px-lg-5 pt-0">
+      
+          <!-- Form -->
+        <form action="/home/sendmoney" method="POST" class="text-center" style="color: #757575;">
 
-       </div>
-
+      
+            <!-- Email -->
+            <div class="md-form">
+              <input type="email" id="materialLoginFormEmail" class="form-control" name="email">
+              <label for="materialLoginFormEmail">E-mail</label>
+            </div>
+      
+            <!-- Rupees -->
+            <div class="md-form">
+              <input type="text" id="materialLoginFormPassword" class="form-control" name="rupees">
+              <label for="materialLoginFormPassword">₹</label>
+            </div>
+            <!-- What's this for? -->
+            <div class="md-form">
+                    <input type="password" id="materialLoginFormPassword" class="form-control" name="massage">
+                    <label for="materialLoginFormPassword">What's this for?</label>
+                  </div>
+      
+    
+      
+            <!-- Send button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Send</button>
+      
+            <!-- Register -->
+            <p>Not a member?
+              <a href="">Register</a>
+            </p>
+      
+            <!-- Social login -->
+            <p>or sign in with:</p>
+            <a type="button" class="btn-floating btn-fb btn-sm">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a type="button" class="btn-floating btn-tw btn-sm">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a type="button" class="btn-floating btn-li btn-sm">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a type="button" class="btn-floating btn-git btn-sm">
+              <i class="fab fa-github"></i>
+            </a>
+      
+          </form>
+          <!-- Form -->
+      
+        </div>
+      
+      </div>
+      <!-- Material form login -->
     </div>
    <!-- Footer -->
 <footer class="page-footer font-small special-color-dark pt-4">
