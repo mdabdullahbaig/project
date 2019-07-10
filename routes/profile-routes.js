@@ -119,8 +119,7 @@ router.post('/sendmoney', authCheck, (req, res) => {
         if (err) {
             console.log(err);
         } else {
-            sendmoney(sendmoney.rupees);
-            console(sendmoney.rupees);
+            
             res.redirect('/home');
         }
     })
