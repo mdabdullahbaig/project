@@ -122,16 +122,16 @@ router.post('/sendmoney', authCheck, (req, res) => {
             
             res.redirect('/home');
         }
-    })
+    });
 });
 
 function escapeRegex(text) {
     return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
 };
 
-function sendmoney(rupees) {
- var avlbal = user.avlbalance;
- var sendrupees = sendmoney.rupees;
- var avlbal = avlbal-sendrupees ;
-}
+// function sendmoney(rupees) {
+//  var avlbal = user.avlbalance;
+//  var sendrupees = sendmoney.rupees;
+//  var avlbal = avlbal-sendrupees ;
+// }
 module.exports = router;
