@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 var sendmoneySchema = new Schema({
-    email: {
+    emailid: {
         type:  String,
         required: true,
         trim: true,

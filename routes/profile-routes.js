@@ -104,12 +104,12 @@ router.get('/sendmoney', authCheck, (req, res) => {
 
 router.post('/sendmoney', authCheck, (req, res) => {
 
-    var email = req.body.email;
+    var emailid = req.body.emailid;
     var rupees = req.body.rupees;
     var massage = req.body.massage;
     
     var newSendmoney = {
-        email: email,
+        emailid: emailid,
         rupees: rupees,
         massage: massage,
         
