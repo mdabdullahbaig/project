@@ -26,7 +26,7 @@
 <body>
 
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark aqua-gradient">
+    <nav class="navbar navbar-expand-lg navbar-dark mdb-color pt-4">
         <!-- sidebar -->
         <span class="navbar-brand" style="font-size:20px;cursor:pointer; margin: 0px 7px 0px 0px;"
             onclick="openNav()">&#9776;</span>
@@ -116,14 +116,14 @@
         </div> -->
 
 
-        <div class="col-md-12">
+        <!-- <div class="col-md-12">
             <% if(noMatch !== null) { %>
             <h3 style="color:brown"><%= noMatch %></h3>
             <% } %>
-        </div>
+        </div> -->
 
 
-        <div class="row text-left">
+        <div class="row">
             <% products.reverse().forEach(function(product) {%>
             <div class="col-md-3 col-xs-6 col-sm-3">
                 <div class="thumbnail">
@@ -154,7 +154,7 @@
 
     </div>
     <!-- Footer -->
-    <footer class="page-footer font-small aqua-gradient">
+    <footer class="page-footer font-small dark mdb-color pt-4">
 
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2019 Copyright:
