@@ -26,7 +26,7 @@
 <body>
 
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark mdb-color pt-4">
+    <nav class="navbar navbar-expand-lg navbar-dark aqua-gradient">
         <!-- sidebar -->
         <span class="navbar-brand" style="font-size:20px;cursor:pointer; margin: 0px 7px 0px 0px;"
             onclick="openNav()">&#9776;</span>
@@ -100,9 +100,6 @@
         <a href=""><i class="fas fa-address-card"></i>About Us</a>
         <% if(currentUser && currentUser.isSeller){%>
         <a href="/home/addproduct"><i class="fas fa-cart-plus"></i></i>Add Product</a>
-        <a href="/home/addmoney"><i class="fas fa-cart-plus"></i></i>Add Money</a>
-        <a href="/home/sendmoney"><i class="fas fa-cart-plus"></i></i>Send Money</a>
-
         <%} %>
         <a href="/auth/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
     </div>
@@ -110,113 +107,63 @@
 
     <!-- homepage -->
     <div id="home-index">
+        <!-- <div class="row">
+                <div class="col-md-12">
+                        <% if(noMatch !== null) { %>
+                        <h3 style="color:brown"><%= noMatch %></h3>
+                        <% } %>
+                </div>
+        </div> -->
+
+
+        <div class="col-md-12">
+            <% if(noMatch !== null) { %>
+            <h3 style="color:brown"><%= noMatch %></h3>
+            <% } %>
+        </div>
+
+
         <div class="row text-left">
-            1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates itaque nobis aperiam officia asperiores
-            totam nemo neque vitae doloribus minus? Blanditiis voluptate cupiditate, sed consectetur accusantium maxime a
-            accusamus sit?
-            <br>
-            <!-- Default inline 1-->
-            <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
-            <label class="custom-control-label" for="defaultInline1">1</label>
-            </div>
-            
-            <!-- Default inline 2-->
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
-                <label class="custom-control-label" for="defaultInline2">2</label>
-            </div>
-            
-            <!-- Default inline 3-->
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
-                <label class="custom-control-label" for="defaultInline3">3</label>
-            </div>
-            <!-- Default inline 4-->
-            <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample">
-                    <label class="custom-control-label" for="defaultInline3">4</label>
-            </div>
-            <hr>
+            <% products.reverse().forEach(function(product) {%>
+            <div class="col-md-3 col-xs-6 col-sm-3">
+                <div class="thumbnail">
+                    <div class="view overlay">
+                        <img alt="thumbnail" class="img-thumbnail" src="<%= product.imgurl01%>"
+                            style="width:auto; height:auto">
+                        <a href="/home/details">
+                            <div class="mask waves-effect waves-light rgba-white-slight"></div>
+                        </a>
+                    </div>
 
-            2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates itaque nobis aperiam officia asperiores
-            totam nemo neque vitae doloribus minus? Blanditiis voluptate cupiditate, sed consectetur accusantium maxime a
-            accusamus sit?
-            <br>
-            <!-- Default inline 1-->
-            <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" class="custom-control-input" id="defaultInline5" name="inlineDefaultRadiosExample">
-            <label class="custom-control-label" for="defaultInline1">1</label>
-            </div>
-            
-            <!-- Default inline 2-->
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="defaultInline6" name="inlineDefaultRadiosExample">
-                <label class="custom-control-label" for="defaultInline2">2</label>
-            </div>
-            
-            <!-- Default inline 3-->
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="defaultInline7" name="inlineDefaultRadiosExample">
-                <label class="custom-control-label" for="defaultInline3">3</label>
-            </div>
-            <!-- Default inline 4-->
-            <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" class="custom-control-input" id="defaultInline8" name="inlineDefaultRadiosExample">
-                    <label class="custom-control-label" for="defaultInline3">4</label>
-            </div>
+                    <h6 class=""><%= product.productname%></h6>
+
+                    <h6 class=""><b>₹<%= product.price%></b></h6>
+                    <p class="text-left"> <a href="/home/details"><button type="button" class="btn btn-outline-default btn-rounded waves-effect">Default</button></a></p>
 
 
-       </div>
+
+                </div>
+            </div>
+            <% }); %>
+        </div>
+
+
+
+
+
 
     </div>
-   <!-- Footer -->
-<footer class="page-footer font-small special-color-dark pt-4">
+    <!-- Footer -->
+    <footer class="page-footer font-small aqua-gradient">
 
-        <!-- Footer Elements -->
-        <div class="container">
-      
-          <!-- Social buttons -->
-          <ul class="list-unstyled list-inline text-center">
-            <li class="list-inline-item">
-              <a class="btn-floating btn-fb mx-1">
-                <i class="fab fa-facebook-f"> </i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-tw mx-1">
-                <i class="fab fa-twitter"> </i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-gplus mx-1">
-                <i class="fab fa-google-plus-g"> </i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-li mx-1">
-                <i class="fab fa-linkedin-in"> </i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-dribbble mx-1">
-                <i class="fab fa-dribbble"> </i>
-              </a>
-            </li>
-          </ul>
-          <!-- Social buttons -->
-      
-        </div>
-        <!-- Footer Elements -->
-      
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2018 Copyright:
-          <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="/"> AnasEnterprises</a>
         </div>
         <!-- Copyright -->
-      
-      </footer>
-      <!-- Footer -->
+
+    </footer>
+    <!-- Footer -->
     <!-- jQueryprime -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
