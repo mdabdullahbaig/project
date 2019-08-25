@@ -20,7 +20,7 @@
 
     <!-- Add CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>AnasEnterprises | HomePage</title>
+    <title>AnasEnterprises | AboutPage</title>
 </head>
 
 <body>
@@ -78,81 +78,11 @@
 
     </nav>
     <!--/.Navbar-->
-    <!-- sidebar -->
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <h6><img src="<%= (user.thumbnail) || ('/image/googlephoto.jpg')%>" alt="thumbnail"
-                class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
-            <% if(currentUser && currentUser.isSeller){%>
-            <i class="fas fa-user-shield"></i>Admin
-            <%} %>
-        </h6>
-        <% if(currentUser && currentUser.isSeller){%>
-        <h6><%= (user.firstname + " " + user.lastname)%></h6>
-        <%} %>
-        <p><%=user.username%></p>
-
-        <p style="padding: 0px 0px 8px 25px; overflow: hidden; border-bottom: 1px solid rgb(199, 194, 194);">
-            <%=user.email%></p>
-
-        <a href="/home"><i class="fas fa-home"></i> Home</a>
-        <a href=""><i class="fas fa-address-book"></i>Contact</a>
-        <a href=""><i class="fas fa-address-card"></i>About Us</a>
-        <% if(currentUser && currentUser.isSeller){%>
-        <a href="/home/addproduct"><i class="fas fa-cart-plus"></i></i>Add Product</a>
-        <%} %>
-        <a href="/auth/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
-    </div>
-
-
+   
+   
     <!-- homepage -->
-    <div id="home-index">
-        <!-- <div class="row">
-                <div class="col-md-12">
-                        <% if(noMatch !== null) { %>
-                        <h3 style="color:brown"><%= noMatch %></h3>
-                        <% } %>
-                </div>
-        </div> -->
-
-
-        <!-- <div class="col-md-12">
-            <% if(noMatch !== null) { %>
-            <h3 style="color:brown"><%= noMatch %></h3>
-            <% } %>
-        </div> -->
-
-
-        <div class="row">
-            <% products.reverse().forEach(function(product) {%>
-            <div class="col-md-3 col-xs-6 col-sm-3">
-                <div class="thumbnail">
-                    <div class="view overlay">
-                        <img alt="thumbnail" class="img-thumbnail" src="<%= product.imgurl01%>"
-                            style="width:auto; height:auto">
-                        <a href="/home/details">
-                            <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                        </a>
-                    </div>
-
-                    <h6 class=""><%= product.productname%></h6>
-
-                    <h6 class=""><b>₹<%= product.price%></b></h6>
-                    <p class="text-left"> <a href="/home/details"><button type="button"
-                                class="btn btn-outline-default btn-rounded waves-effect">More</button></a></p>
-
-
-
-                </div>
-            </div>
-            <% }); %>
-        </div>
-
-
-
-
-
-
+    <div id="home">
+                <h1>Hi There!</h1>
     </div>
 
     <!-- Footer -->
@@ -160,12 +90,14 @@
 
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2019 Copyright:
-            <a href="/"> AnasEnterprises</a>
+            <a href="http://anasenterprises.dreamstores.in/"> AnasEnterprises</a>
         </div>
         <!-- Copyright -->
 
     </footer>
     <!-- Footer -->
+
+
     <!-- jQueryprime -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

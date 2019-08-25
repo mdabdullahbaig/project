@@ -66,6 +66,10 @@ router.get('/addproduct', authCheck, (req, res) => {
     });
 });
 
+router.get("*", authCheck, (req,res) => {
+    res.send("Page Not Found - 404 ");
+})
+
 
 router.post('/addproduct', authCheck, (req, res) => {
 
