@@ -20,137 +20,82 @@
 
     <!-- Add CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>AnasEnterprises | HomePage</title>
+    <title>HomePage</title>
 </head>
 
 <body>
 
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark mdb-color pt-4">
-        <!-- sidebar -->
-        <span class="navbar-brand" style="font-size:20px;cursor:pointer; margin: 0px 7px 0px 0px;"
-            onclick="openNav()">&#9776;</span>
-
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="/"><b>Anas</b>Enterprises</a>
-
-        <!-- Collapse button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-caret-down"></i>
-        </button>
-
-        <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="basicExampleNav">
-
-            <!-- Links -->
-            <ul class="navbar-nav mr-auto" style="margin: 5px 0px 0px 7px">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-
-
-                <!-- Dropdown -->
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li> -->
-
-            </ul>
-            <!-- Links -->
-
-            <form class="form-inline">
-                <div class="md-form my-10">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                </div>
-            </form>
-        </div>
-        <!-- Collapsible content -->
-
-    </nav>
-    <!--/.Navbar-->
+     <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark mdb-color pt-4">
     <!-- sidebar -->
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <h6><img src="<%= (user.thumbnail) || ('/image/googlephoto.jpg')%>" alt="thumbnail"
-                class="rounded-circle img-fluid" style="width: 50px; height: 50px;">
-            <% if(currentUser && currentUser.isSeller){%>
-            <i class="fas fa-user-shield"></i>Admin
-            <%} %>
-        </h6>
-        <% if(currentUser && currentUser.isSeller){%>
-        <h6><%= (user.firstname + " " + user.lastname)%></h6>
-        <%} %>
-        <p><%=user.username%></p>
+    <span class="navbar-brand" style="font-size:20px;cursor:pointer; margin: 0px 12px"
+      onclick="openNav()">&#9776;</span>
 
-        <p style="padding: 0px 0px 8px 25px; overflow: hidden; border-bottom: 1px solid rgb(199, 194, 194);">
-            <%=user.email%></p>
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="/">Project</a>
 
-        <a href="/home"><i class="fas fa-home"></i> Home</a>
-        <a href=""><i class="fas fa-address-book"></i>Contact</a>
-        <a href=""><i class="fas fa-address-card"></i>About Us</a>
-        <% if(currentUser && currentUser.isSeller){%>
-        <a href="/home/addproduct"><i class="fas fa-cart-plus"></i></i>Add Product</a>
-        <%} %>
-        <a href="/auth/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
-    </div>
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-caret-down"></i>
+    </button>
 
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
 
-    <!-- homepage -->
-    <div id="home-index">
-        <!-- <div class="row">
-                <div class="col-md-12">
-                        <% if(noMatch !== null) { %>
-                        <h3 style="color:brown"><%= noMatch %></h3>
-                        <% } %>
-                </div>
-        </div> -->
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/auth/login">Login
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/auth/login">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/auth/logout">Logout</a>
+        </li>
 
 
-        <!-- <div class="col-md-12">
-            <% if(noMatch !== null) { %>
-            <h3 style="color:brown"><%= noMatch %></h3>
-            <% } %>
-        </div> -->
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
 
+      </ul>
+      <!-- Links -->
 
-        <div class="row">
-            <% products.reverse().forEach(function(product) {%>
-            <div class="col-md-3 col-xs-6 col-sm-3">
-                <div class="thumbnail">
-                    <div class="view overlay">
-                        <img alt="thumbnail" class="img-thumbnail" src="<%= product.imgurl01%>"
-                            style="width:auto; height:auto">
-                        <a href="/home/details">
-                            <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                        </a>
-                    </div>
-
-                    <h6 class=""><%= product.productname%></h6>
-
-                    <h6 class=""><b>₹<%= product.price%></b></h6>
-                    <p class="text-left"> <a href="/home/details"><button type="button"
-                                class="btn btn-outline-default btn-rounded waves-effect">More</button></a></p>
-
-
-
-                </div>
-            </div>
-            <% }); %>
+      <form class="form-inline">
+        <div class="md-form my-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         </div>
+      </form>
+    </div>
+    <!-- Collapsible content -->
 
+  </nav>
+  <!--/.Navbar-->
+ 
+    
+    <div id="home-index">
+       
+        <h1>Welcome</h1>
 
+       
 
+           <h5><%= currentUser.email%></h5> 
+           <h5><%= currentUser.mobileno%></h5>
+            <h5><%= currentUser.firstname%></h5>
 
+           <h3> <a href="/home/update">Update profile</a></h3>
+           
 
 
     </div>
@@ -160,7 +105,6 @@
 
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2019 Copyright:
-            <a href="/"> AnasEnterprises</a>
         </div>
         <!-- Copyright -->
 

@@ -19,7 +19,7 @@
   <!-- Add CSS -->
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 
-  <title>AnasEnterprises | homepage | LandingPage</title>
+  <title>LandingPage</title>
 </head>
 
 <body>
@@ -30,7 +30,7 @@
       onclick="openNav()">&#9776;</span>
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="/"><b>Anas</b>Enterprises</a>
+    <a class="navbar-brand" href="/">Project</a>
 
     <!-- Collapse button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -44,12 +44,15 @@
       <!-- Links -->
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home
+          <a class="nav-link" href="/auth/login">Login
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="/auth/login">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/auth/logout">Logout</a>
         </li>
 
 
@@ -77,21 +80,7 @@
 
   </nav>
   <!--/.Navbar-->
-  <!-- sidebar -->
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="/home"><i class="fas fa-home"></i> Home</a>
-    <a href=""><i class="fas fa-address-book"></i>Contact</a>
-    <a href=""><i class="fas fa-address-card"></i>About Us</a>
-    <% if(currentUser) {%>
-    <a href="/auth/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
-
-    <%} else {%>
-    <a href="/auth/login"><i class="fas fa-sign-out-alt"></i>Login | SignUp</a>
-    <%}%>
-                
-  </div>
-
+  
   <div id="home">
     <!-- Section: Blog v.4 -->
 <section class="my-5">
@@ -107,7 +96,7 @@
 
         <!-- Card image -->
         <div class="view view-cascade overlay">
-          <img class="card-img-top" src="https://images.squarespace-cdn.com/content/v1/5a01a4ad692ebe0459a26844/1514055898968-SCHH1HZJ12R509J3Z2HV/ke17ZwdGBToddI8pDm48kPqQfq0L3n3wpHIsRapTfg8UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKczo5Zn4xktlpMsMj-QlHXeMfNK6GwvtVkYEWiR8XAPyD3GfLCe_DXOSC_YcAacWL_/bookworm-Shop-meadows+013-LowH.jpg?format=1500w" alt="Sample image">
+          <img class="card-img-top" src="https://di3xp7dfi3cq.cloudfront.net/pub/media/magefan_blog/i/t/it_project_management.jpeg" alt="Sample image">
           <a href="#!">
             <div class="mask rgba-white-slight"></div>
           </a>
@@ -117,7 +106,6 @@
         <div class="card-body card-body-cascade text-center">
 
           <!-- Title -->
-          <h2 class="font-weight-bold"><a>Welcome to Anas Enterprises</a></h2>
           <a href="/auth/login" class="btn btn-mdb-color">Get Started</a>
           <!-- Data -->
           <!-- <p>Written by <a><strong>Abby Madison</strong></a>, 26/08/2018</p> -->
@@ -143,7 +131,6 @@
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2019 Copyright:
-      <a href="http://anasenterprises.dreamstores.in/"> AnasEnterprises</a>
     </div>
     <!-- Copyright -->
   

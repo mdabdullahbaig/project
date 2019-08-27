@@ -40,6 +40,8 @@ app.use(function(req,res,next){
     next();
 });
 
+
+
 //connect to mongodb
 mongoose.set('debug', true);
 mongoose.connect(keys.mongodb.dbURL, () => {
